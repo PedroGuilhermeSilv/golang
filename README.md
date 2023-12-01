@@ -12,7 +12,7 @@ type ID int
 var a ID
 ``` 
 
-- Podemos imprimir o tipo e valor da variável usando a biblioteca ftm::
+- Podemos imprimir o tipo e valor da variável usando a biblioteca ftm (pasta 4):
 1. Tipo:
 ``` 
 fmt.Printf("o tipo de f é %T", f)
