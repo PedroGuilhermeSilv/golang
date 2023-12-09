@@ -21,3 +21,49 @@ fmt.Printf("o tipo de f é %T", f)
 ``` 
 fmt.Printf("o valor de f é %v", f)
 ``` 
+
+## Slice
+- O slice é um array que permite aummentar sua capacitade de acordo com a demanda. Todo append() feito ultrapasse a capacidade inicial o Go criará um array com a mesma capacidade duplicando o tamanho original. 
+
+## Função
+- No golang podemos retornar dois resultados em uma mesma função por exemplo:
+```
+func main(){
+	res , err :=soma(50,30)
+	if err != nil {
+		fmt.Println(err)
+	} else{
+		fmt.Println(res)
+	}	
+}
+```
+
+```
+func soma(a,b int) (int, error){
+	soma := a+b;
+	if soma>=50 {
+		return soma , errors.New("maior que 50")
+	}
+	return soma, nil
+}
+```
+
+Essa lógica é utilizada como try catch em outras linguagens.
+
+- As funções podem ser variáticas, ou seja, posso definir um valor inifito para a quantidade de parâmetros que ela pode receber por exemplo:
+
+```
+func main(){
+	res :=soma(50,30)
+	fmt.Println(res)	
+}
+```
+```
+func soma(numeros ...int) int{
+	var soma int
+	for _, value := range numeros{
+		soma += value 
+	}
+	return soma
+}
+```
