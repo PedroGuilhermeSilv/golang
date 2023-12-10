@@ -67,3 +67,21 @@ func soma(numeros ...int) int{
 	return soma
 }
 ```
+
+- Closures: funções anônimas ou funções que rodam dentro de outras funções são geralmente usada para executar comandos de rotinas, por exemplo:
+
+```
+func() {
+	rodar webserver
+}()
+```
+
+- o go não é ummma linguagem orientada a objetos então ela trabalha com algo similar chamado de "struct". A struct permite você criar algo semente a uma classe, por exemplo:
+
+```
+type Cliente struct{
+	Nome string
+	Idade int
+	Ativo bool
+}
+```
